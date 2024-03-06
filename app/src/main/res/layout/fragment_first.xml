@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B4E0FD"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".view.FirstFragment">
+
+        <ImageView
+            android:id="@+id/flagImageView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoreTextView" />
+
+        <TextView
+            android:id="@+id/countryNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="16dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/changeCountryButton"
+            android:layout_width="181dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#4C8DFF"
+            android:text="Devam Et"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/guessCountryName"
+            app:layout_constraintStart_toStartOf="@+id/guessCountryName"
+            app:layout_constraintTop_toBottomOf="@+id/guessCountryName" />
+
+        <EditText
+            android:id="@+id/guessCountryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#00FFFFFF"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Ülkenin adını giriniz."
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#989898"
+            app:layout_constraintEnd_toEndOf="@+id/flagImageView"
+            app:layout_constraintStart_toStartOf="@+id/flagImageView"
+            app:layout_constraintTop_toBottomOf="@+id/flagImageView" />
+
+        <TextView
+            android:id="@+id/scoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/score_background"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/skipButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1A3E7E"
+            android:text="Geç"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/changeCountryButton"
+            app:layout_constraintStart_toStartOf="@+id/changeCountryButton"
+            app:layout_constraintTop_toBottomOf="@+id/changeCountryButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
